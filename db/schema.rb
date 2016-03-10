@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310182212) do
+ActiveRecord::Schema.define(version: 20160310212452) do
 
   create_table "address_fields", force: true do |t|
     t.string   "address"
@@ -23,18 +23,6 @@ ActiveRecord::Schema.define(version: 20160310182212) do
   end
 
   add_index "address_fields", ["contact_form_id"], name: "index_address_fields_on_contact_form_id"
-
-  create_table "contact_fields", force: true do |t|
-    t.string   "address"
-    t.string   "country"
-    t.boolean  "removed"
-    t.integer  "contact_form_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "phone"
-  end
-
-  add_index "contact_fields", ["contact_form_id"], name: "index_contact_fields_on_contact_form_id"
 
   create_table "contact_forms", force: true do |t|
     t.string   "firstname"
