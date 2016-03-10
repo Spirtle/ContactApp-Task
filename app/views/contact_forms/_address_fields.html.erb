@@ -1,0 +1,10 @@
+<!-- Address form ui -->
+<fieldset>
+  <%= f.label "Address"%>
+  <%= f.text_field :address,:size=>"50", placeholder: "Enter address",:required => true %><br><br>
+  <%= f.label "Country"%>
+  <%= f.text_field :country,:size=>"50", placeholder: "Enter country",:required => true %><br>
+  <%= f.hidden_field :_destroy %><hr>
+  <%= f.check_box :removed,class: "hide" %>
+  <%= link_to "remove", '#', class: "remove_fields" %>
+</fieldset><br>

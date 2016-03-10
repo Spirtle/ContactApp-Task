@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SpirtleTask</title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1 class="center">Contacts App</h1>
+
+<!-- Menu ui-->
+<div id="centeredmenu">
+  <ul>
+    <li><a href="/contact_forms">All Contact</a></li>
+    <li><a href="/contact_forms/new">New Contact</a></li>
+  </ul>
+</div>
+
+<%= yield %>
+
+</body>
+</html>

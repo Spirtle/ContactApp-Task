@@ -1,0 +1,37 @@
+<h1>Listing contact details</h1>
+
+<!-- Index page table ui -->
+<table border="1">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Address</th>
+      <th>Country</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contact_forms.each do |contact_form| %>
+      <tr>
+        <td><%= contact_form.firstname %></td>
+        <td><%= contact_form.lastname %></td>
+        <td><% contact_form.addresses.each do |contact_type| %>
+            <%= contact_type.address.strip if !contact_type.removed %>&nbsp;
+        <% end %>
+        </td>
+        <td><% contact_form.addresses.each do |contact_type| %>
+              <%= contact_type.country.strip if !contact_type.removed %>&nbsp;
+          <% end %>
+        </td>
+      <td>
+        <% contact_form.phones.each do |phone_type| %>
+            <%= phone_type.phone.strip if !phone_type.removed %>&nbsp;
+        <% end %>
+      </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

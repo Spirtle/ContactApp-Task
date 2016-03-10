@@ -1,0 +1,8 @@
+<!-- Phone details ui -->
+<fieldset>
+  <%= f.label "Phone"%>
+  <%= f.text_field :phone,:size=>"50", placeholder: "Enter phone",:required => true %><br>
+  <%= f.hidden_field :_destroy %><hr>
+  <%= f.check_box :removed,class: "hide" %>
+  <%= link_to "remove", '#', class: "remove_fields" %>
+</fieldset><br>
